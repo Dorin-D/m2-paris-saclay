@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#attendsCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#attendsCourse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasExamination -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasExamination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#examination"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#teachesCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#teachesCourse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#professor"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appealStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appealStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appeal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasCheated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasCheated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#hasGrade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Exam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Exam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#examination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Project -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Project">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#examination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appeal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appeal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#course"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#enrollment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#enrollment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#examination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#examination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#jury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#jury"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#professor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#professor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Ard_H_Wok -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Ard_H_Wok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#professor"/>
+        <untitled-ontology-5:teachesCourse rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Copy_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Copy_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#appeal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23Exam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23Exam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Exam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Kekke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Kekke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#jury"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Kokka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Kokka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#jury"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#ManYslides -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#ManYslides">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#professor"/>
+        <untitled-ontology-5:teachesCourse rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Quality_Gazer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Quality_Gazer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+        <untitled-ontology-5:attendsCourse rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23"/>
+        <untitled-ontology-5:attendsCourse rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Quantity_Kid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Quantity_Kid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#student"/>
+        <untitled-ontology-5:attendsCourse rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#DataScience23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23Project -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#QuantumRocketry23Project">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dorin/ontologies/2023/8/untitled-ontology-5#Project"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
