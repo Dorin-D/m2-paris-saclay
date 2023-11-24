@@ -30,6 +30,7 @@ class HardEnvironment:
 
     def __init__(self, n_a, variability):
         """Instanciate a new environement in its initial state."""
+        
         assert variability > 0
         assert variability <= 1
         self.variability = variability

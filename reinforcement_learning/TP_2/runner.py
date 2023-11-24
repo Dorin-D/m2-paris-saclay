@@ -32,7 +32,19 @@ class Runner:
         return cumul_reward, list_cumul
 
 
-def iter_or_loopcall(o, count, n_actions):
+def iter_or_loopcall_env(o, count, n_actions, variability):
+    if callable(o):
+        return [o(n_actions, variability=variability) for _ in range(count)]
+    else:
+        # must be iterable
+        return list(iter(o))
+
+
+def iter_or_loopcall_agent(
+    o,
+    count,
+    n_actions,
+):
     if callable(o):
         return [o(n_actions) for _ in range(count)]
     else:
@@ -46,9 +58,19 @@ class BatchRunner:
     and aggregates the results.
     """
 
-    def __init__(self, env_maker, agent_maker, count, n_actions, verbose=False):
-        self.environments = iter_or_loopcall(env_maker, count, n_actions)
-        self.agents = iter_or_loopcall(agent_maker, count, n_actions)
+    def __init__(
+        self,
+        env_maker,
+        agent_maker,
+        count,
+        n_actions,
+        variability,
+        verbose=False,
+    ):
+        self.environments = iter_or_loopcall_env(
+            env_maker, count, n_actions, variability
+        )
+        self.agents = iter_or_loopcall_agent(agent_maker, count, n_actions)
         assert len(self.agents) == len(self.environments)
         self.verbose = verbose
 
