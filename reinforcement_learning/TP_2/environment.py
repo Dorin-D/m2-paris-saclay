@@ -20,9 +20,10 @@ class EasyEnvironment:
         self.ps = self.ps.clip(0,1)
     def act(self, action):
         """Perform given action by the agent on the environment,
-        and returns a reward.
+        and returns a reward. Also returns regret, because why not.
         """
-        return np.random.binomial(1, self.ps[action])
+        regret = np.max(self.ps) - self.ps[action]
+        return regret, np.random.binomial(1, self.ps[action])
 
 class HardEnvironment:
     # List of the possible actions by the agents
@@ -40,11 +41,16 @@ class HardEnvironment:
             10, np.random.rand(n_a) * 2 - 1
         )  # log-uniform random between 0.1 and 10
 
+        self.expected_rewards = ( 
+            (self.ps + self.offsets) * self.variability * self.scales
+        )
+
     def act(self, action):
         """Perform given action by the agent on the environment,
-        and returns a reward.
+        and returns a reward. Also returns regret.
         """
-        return (
+        regret = np.max(self.expected_rewards) - self.expected_rewards[action]
+        return regret, (
             (np.random.binomial(1, self.ps[action]) + self.offsets[action])
             * self.variability
             * self.scales[action]
