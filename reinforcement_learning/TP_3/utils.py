@@ -78,7 +78,7 @@ class WithSnapshots(gym.Wrapper):
         Note that is_done = terminated or truncated
         """
         self.load_snapshot(snapshot)
-        observation, r, done, info = self.step(action)
+        observation, r, done, truncated, info = self.step(action)
         next_snapshot = self.get_snapshot()
         return ActionResult(next_snapshot,
                             observation, 
