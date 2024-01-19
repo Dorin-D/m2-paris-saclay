@@ -1,0 +1,21 @@
+The QUAERO French Medical Corpus is released under the GNU Free Documentation License (GFDL) http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License. 
+
+Any research using this corpus for running experiments should include the following citation: 
+
+Névéol A, Grouin C, Leixa J, Rosset S, Zweigenbaum P. The QUAERO French Medical Corpus: A Ressource for Medical Entity Recognition and Normalization. Fourth Workshop on Building and Evaluating Ressources for Health and Biomedical Text Processing - BioTxtM2014. 2014:24-30
+
+This work has been partially funded by OSEO under the Quaero program and by the French ANR Cabernet project (ANR-13-JS02-0009).
+
+========================
+CLEF e-Health 2015 Task 1b
+========================
+
+The CLEF e-Health 2015 Task 1b data comprises a subset of the QUAERO corpus, as follows:
+
+Test data (phase 2): 
+- MEDLINE folder: 832 MEDLINE titles, annotated with entities in the BRAT stand-off annotation format, and 3 BRAT configuration files
+- EMEA folder: 3 EMEA documents, segmented into 12 files, annotated with entities in the BRAT stand-off annotation format, and 3 BRAT configuration files
+
+All questions regarding the task or data should be addressed to the CLEF e-Health 2015 Task 1b mailing list clefehealth2015-task1b@limsi.fr
+
+
