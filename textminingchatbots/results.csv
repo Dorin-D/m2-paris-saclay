@@ -1,0 +1,13 @@
+,format,split,subset,tokens,entities,unique_entities,entity_types
+2,conll,dev,EMEA,2704,2306,720,19
+8,brat,dev,EMEA,3094,2260,756,10
+3,conll,dev,MEDLINE,3596,2990,2202,20
+9,brat,dev,MEDLINE,4237,2977,2288,10
+4,conll,test,EMEA,2604,2213,643,20
+10,brat,test,EMEA,3015,2204,658,10
+5,conll,test,MEDLINE,3823,3078,2265,20
+11,brat,test,MEDLINE,4535,3103,2390,10
+0,conll,train,EMEA,3198,2841,898,20
+6,brat,train,EMEA,3579,2695,923,10
+1,conll,train,MEDLINE,3624,2961,2198,20
+7,brat,train,MEDLINE,4328,2994,2296,10
